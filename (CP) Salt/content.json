@@ -1,0 +1,164 @@
+{
+  "Format": "2.0.0",
+  "Changes": [
+    // add item
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Salt": {
+          "Name": "{{ModId}}_Salt", // best practice to match the ID, since it's sometimes used as an alternate ID (e.g. in Data/CraftingRecipes)
+          "Displayname": "{{i18n:Salt_name}}", //i18n key
+          "Description": "{{i18n:Salt_description}}", //i18n key
+          "Type": "Resources",
+          "Category": -15,
+          "Price": 25,
+
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 0
+        }
+      }
+    },
+    // produce item
+    {
+      "Action": "EditData",
+      "Target": "data/Machines",
+      "TargetField": [
+        "(BC)13"
+      ],
+      "Entries": {
+        "OutputRules": [
+          {
+            "Id": "Emerald",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)60",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 10,
+                "MaxStack": 10
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          }
+        ]
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/Machines",
+      "TargetField": [
+        "(BC)13"
+      ],
+      "Entries": {
+        "OutputRules": [
+          {
+            "Id": "Aquamarine",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)62",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 7,
+                "MaxStack": 8
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          }
+        ]
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/Machines",
+      "TargetField": [
+        "(BC)13"
+      ],
+      "Entries": {
+        "OutputRules": [
+          {
+            "Id": "Ruby",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)64",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 10,
+                "MaxStack": 10
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          }
+        ]
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/Machines",
+      "TargetField": [
+        "(BC)13"
+      ],
+      "Entries": {
+        "OutputRules": [
+          {
+            "Id": "Amethyst",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)66",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 4,
+                "MaxStack": 4
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          }
+        ]
+      }
+    },
+
+
+    // add item image
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Objects",
+      "FromFile": "assets/{{TargetWithoutPath}}.png" // assets/Objects.png
+    }
+  ]
+}

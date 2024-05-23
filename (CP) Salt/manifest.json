@@ -1,0 +1,11 @@
+{
+  "Name": "Salt",
+  "Author": "frozenoj",
+  "Version": "1.0.0",
+  "Description": "Adds salt as an in-game resource.",
+  "UniqueID": "frozenoj.salt",
+  "UpdateKeys": null,
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  }
+}
