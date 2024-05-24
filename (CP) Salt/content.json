@@ -7,7 +7,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModId}}_Salt": {
-          "Name": "{{ModId}}_Salt", // best practice to match the ID, since it's sometimes used as an alternate ID (e.g. in Data/CraftingRecipes)
+          "Name": "{{ModId}}_Salt", 
           "Displayname": "{{i18n:Salt_name}}", //i18n key
           "Description": "{{i18n:Salt_description}}", //i18n key
           "Type": "Resources",
@@ -20,6 +20,7 @@
       }
     },
     // produce item
+
     {
       "Action": "EditData",
       "Target": "data/Machines",
@@ -29,10 +30,10 @@
       "Entries": {
         "OutputRules": [
           {
-            "Id": "Emerald",
+            "Id": "Limestone",
             "Triggers": [
               {
-                "RequiredItemId": "(O)60",
+                "RequiredItemId": "(O)571",
                 "RequiredCount": 1
               }
             ],
@@ -41,64 +42,20 @@
               {
                 "Id": "{{ModId}}_Salt",
                 "ItemId": "{{ModId}}_Salt",
-                "MinStack": 10,
-                "MaxStack": 10
-              }
-            ],
-            "MinutesUntilReady": 120,
-            "DaysUntilReady": -1,
-            "InvalidCountMessage": null,
-            "RecalculateOnCollect": false
-          }
-        ]
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/Machines",
-      "TargetField": [
-        "(BC)13"
-      ],
-      "Entries": {
-        "OutputRules": [
-          {
-            "Id": "Aquamarine",
-            "Triggers": [
-              {
-                "RequiredItemId": "(O)62",
-                "RequiredCount": 1
-              }
-            ],
-            "UseFirstValidOutput": false,
-            "OutputItem": [
-              {
-                "Id": "{{ModId}}_Salt",
-                "ItemId": "{{ModId}}_Salt",
-                "MinStack": 7,
-                "MaxStack": 8
+                "MinStack": 1,
+                "MaxStack": 1
               }
             ],
             "MinutesUntilReady": 30,
             "DaysUntilReady": -1,
             "InvalidCountMessage": null,
             "RecalculateOnCollect": false
-          }
-        ]
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/Machines",
-      "TargetField": [
-        "(BC)13"
-      ],
-      "Entries": {
-        "OutputRules": [
+          },
           {
-            "Id": "Ruby",
+            "Id": "Mudstone",
             "Triggers": [
               {
-                "RequiredItemId": "(O)64",
+                "RequiredItemId": "(O)574",
                 "RequiredCount": 1
               }
             ],
@@ -107,26 +64,236 @@
               {
                 "Id": "{{ModId}}_Salt",
                 "ItemId": "{{ModId}}_Salt",
-                "MinStack": 10,
-                "MaxStack": 10
+                "MinStack": 1,
+                "MaxStack": 1
               }
             ],
-            "MinutesUntilReady": 120,
+            "MinutesUntilReady": 30,
             "DaysUntilReady": -1,
             "InvalidCountMessage": null,
             "RecalculateOnCollect": false
-          }
-        ]
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/Machines",
-      "TargetField": [
-        "(BC)13"
-      ],
-      "Entries": {
-        "OutputRules": [
+          },
+          
+          {
+            "Id": "Baryte",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)540",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 2,
+                "MaxStack": 2
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Earth Crystal",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)86",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 2,
+                "MaxStack": 2
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Sandstone",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)568",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 2,
+                "MaxStack": 3
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Calcite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)542",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 3,
+                "MaxStack": 3
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Frozen Tear",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)84",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 3,
+                "MaxStack": 3
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Granite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)569",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 3,
+                "MaxStack": 3
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Orpiment",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)556",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 3,
+                "MaxStack": 4
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Nekoite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)555",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 3,
+                "MaxStack": 4
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Slate",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)576",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 3,
+                "MaxStack": 4
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Topaz",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)68",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 3,
+                "MaxStack": 4
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
           {
             "Id": "Amethyst",
             "Triggers": [
@@ -148,11 +315,847 @@
             "DaysUntilReady": -1,
             "InvalidCountMessage": null,
             "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Esperite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)544",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 4,
+                "MaxStack": 4
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          
+          {
+            "Id": "Malachite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)552",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 4,
+                "MaxStack": 4
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Thunder Egg",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)558",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 4,
+                "MaxStack": 4
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Jagoite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)549",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 4,
+                "MaxStack": 5
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Marble",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)567",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 4,
+                "MaxStack": 5
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Petrified Slime",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)557",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 4,
+                "MaxStack": 5
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Pyrite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)559",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 4,
+                "MaxStack": 5
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Soapstone",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)572",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 4,
+                "MaxStack": 5
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Aerinite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)541",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 5,
+                "MaxStack": 5
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Celestine",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)566",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 5,
+                "MaxStack": 5
+              }
+            ],
+            "MinutesUntilReady": 30,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Alamite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)538",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 6,
+                "MaxStack": 6
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Geminite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)546",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 6,
+                "MaxStack": 6
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Hematite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)573",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 6,
+                "MaxStack": 6
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Jamborite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)548",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 6,
+                "MaxStack": 6
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Jasper",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)563",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 6,
+                "MaxStack": 6
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Opal",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)564",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 6,
+                "MaxStack": 6
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Basalt",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)570",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 7,
+                "MaxStack": 7
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Aquamarine",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)62",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 7,
+                "MaxStack": 8
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Fluorapatite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)545",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 8,
+                "MaxStack": 8
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Ghost Crystal",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)561",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 8,
+                "MaxStack": 8
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Jade",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)70",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 8,
+                "MaxStack": 8
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Lemon Stone",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)554",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 8,
+                "MaxStack": 8
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Lunarite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)551",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 8,
+                "MaxStack": 8
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Obsidian",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)575",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 8,
+                "MaxStack": 8
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Ocean Stone",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)560",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 8,
+                "MaxStack": 9
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Emerald",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)60",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 10,
+                "MaxStack": 10
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Fairy Stone",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)577",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 10,
+                "MaxStack": 10
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Kyanite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)550",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 10,
+                "MaxStack": 10
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Ruby",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)64",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 10,
+                "MaxStack": 10
+              }
+            ],
+            "MinutesUntilReady": 120,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Tigerseye",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)562",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 11,
+                "MaxStack": 11
+              }
+            ],
+            "MinutesUntilReady": 300,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Bixite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)539",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 12,
+                "MaxStack": 12
+              }
+            ],
+            "MinutesUntilReady": 300,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Dolomite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)543",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 12,
+                "MaxStack": 12
+              }
+            ],
+            "MinutesUntilReady": 300,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Fire Opal",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)565",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 14,
+                "MaxStack": 14
+              }
+            ],
+            "MinutesUntilReady": 300,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Neptunite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)553",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 16,
+                "MaxStack": 16
+              }
+            ],
+            "MinutesUntilReady": 300,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Helvite",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)547",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 18,
+                "MaxStack": 18
+              }
+            ],
+            "MinutesUntilReady": 300,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Star Shards",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)578",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 20,
+                "MaxStack": 20
+              }
+            ],
+            "MinutesUntilReady": 300,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Diamond",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)72",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 30,
+                "MaxStack": 30
+              }
+            ],
+            "MinutesUntilReady": 480,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
+          },
+          {
+            "Id": "Prismatic Shard",
+            "Triggers": [
+              {
+                "RequiredItemId": "(O)74",
+                "RequiredCount": 1
+              }
+            ],
+            "UseFirstValidOutput": false,
+            "OutputItem": [
+              {
+                "Id": "{{ModId}}_Salt",
+                "ItemId": "{{ModId}}_Salt",
+                "MinStack": 80,
+                "MaxStack": 80
+              }
+            ],
+            "MinutesUntilReady": 560,
+            "DaysUntilReady": -1,
+            "InvalidCountMessage": null,
+            "RecalculateOnCollect": false
           }
         ]
       }
     },
-
 
     // add item image
     {
