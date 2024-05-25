@@ -1,0 +1,278 @@
+{
+    "Format": "2.0.0",
+    "ConfigSchema": {
+      "Mayo": {
+        "AllowValues": "Vinegar, Glass, Quartz, Vanilla",
+        "Default": "Vanilla",
+        "Description": "Require vinegar, glass shards, refined quartz, or nothing (vanilla) to use the mayonnaise machine."
+      },
+      "Cheese": {
+        "AllowValues": "Vinegar, Glass, Quartz, Vanilla",
+        "Default": "Vanilla",
+        "Description": "Require vinegar, glass shards, refined quartz, or nothing (vanilla) to use the cheese press."
+      },
+      "Keg": {
+        "AllowValues": "Sugar, Glass, Quartz, Vanilla",
+        "Default": "Vanilla",
+        "Description": "Require sugar, glass shards, refined quartz, or nothing (vanilla) to use the keg."
+      },
+      "Preserves": {
+        "AllowValues": "Sugar, Glass, Quartz, Vanilla",
+        "Default": "Vanilla",
+        "Description": "Require sugar, glass shards, refined quartz, or nothing (vanilla) to use the preserves jar."
+      },
+      "BuyGlass": {
+        "AllowValues": "true, false",
+        "Default": false,
+        "Description": "When checked Clint will sell glass shards for 25g."
+      }
+    },
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "data/Machines",
+      "TargetField": [
+        "(BC)24"
+      ],
+      "Entries": {
+        "AdditionalConsumedItems": [
+          {
+            "ItemId": "419",
+            "RequiredCount": 1,
+            "InvalidCountMessage": "[LocalizedText Strings\\StringsFromCSFiles:Object.cs.12772]"
+          }
+        ]
+      },
+      "When": {
+        "Mayo": "Vinegar"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/Machines",
+      "TargetField": [
+        "(BC)24"
+      ],
+      "Entries": {
+        "AdditionalConsumedItems": [
+          {
+            "ItemId": "118",
+            "RequiredCount": 1,
+            "InvalidCountMessage": "[LocalizedText Strings\\StringsFromCSFiles:Object.cs.12772]"
+          }
+        ]
+      },
+      "When": {
+        "Mayo": "Glass"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/Machines",
+      "TargetField": [
+        "(BC)24"
+      ],
+      "Entries": {
+        "AdditionalConsumedItems": [
+          {
+            "ItemId": "338",
+            "RequiredCount": 1,
+            "InvalidCountMessage": "[LocalizedText Strings\\StringsFromCSFiles:Object.cs.12772]"
+          }
+        ]
+      },
+      "When": {
+        "Mayo": "Quartz"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/Machines",
+      "TargetField": [
+        "(BC)16"
+      ],
+      "Entries": {
+        "AdditionalConsumedItems": [
+          {
+            "ItemId": "419",
+            "RequiredCount": 1,
+            "InvalidCountMessage": "[LocalizedText Strings\\StringsFromCSFiles:Object.cs.12772]"
+          }
+        ]
+      },
+      "When": {
+        "Cheese": "Vinegar"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/Machines",
+      "TargetField": [
+        "(BC)16"
+      ],
+      "Entries": {
+        "AdditionalConsumedItems": [
+          {
+            "ItemId": "118",
+            "RequiredCount": 1,
+            "InvalidCountMessage": "[LocalizedText Strings\\StringsFromCSFiles:Object.cs.12772]"
+          }
+        ]
+      },
+      "When": {
+        "Cheese": "Glass"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/Machines",
+      "TargetField": [
+        "(BC)16"
+      ],
+      "Entries": {
+        "AdditionalConsumedItems": [
+          {
+            "ItemId": "338",
+            "RequiredCount": 1,
+            "InvalidCountMessage": "[LocalizedText Strings\\StringsFromCSFiles:Object.cs.12772]"
+          }
+        ]
+      },
+      "When": {
+        "Cheese": "Glass"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/Machines",
+      "TargetField": [
+        "(BC)12"
+      ],
+      "Entries": {
+        "AdditionalConsumedItems": [
+          {
+            "ItemId": "245",
+            "RequiredCount": 1,
+            "InvalidCountMessage": "[LocalizedText Strings\\StringsFromCSFiles:Object.cs.12772]"
+          }
+        ]
+      },
+      "When": {
+        "Keg": "Sugar"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/Machines",
+      "TargetField": [
+        "(BC)12"
+      ],
+      "Entries": {
+        "AdditionalConsumedItems": [
+          {
+            "ItemId": "118",
+            "RequiredCount": 1,
+            "InvalidCountMessage": "[LocalizedText Strings\\StringsFromCSFiles:Object.cs.12772]"
+          }
+        ]
+      },
+      "When": {
+        "Keg": "Glass"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/Machines",
+      "TargetField": [
+        "(BC)12"
+      ],
+      "Entries": {
+        "AdditionalConsumedItems": [
+          {
+            "ItemId": "338",
+            "RequiredCount": 1,
+            "InvalidCountMessage": "[LocalizedText Strings\\StringsFromCSFiles:Object.cs.12772]"
+          }
+        ]
+      },
+      "When": {
+        "Keg": "Quartz"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/Machines",
+      "TargetField": [
+        "(BC)12"
+      ],
+      "Entries": {
+        "AdditionalConsumedItems": [
+          {
+            "ItemId": "245",
+            "RequiredCount": 1,
+            "InvalidCountMessage": "[LocalizedText Strings\\StringsFromCSFiles:Object.cs.12772]"
+          }
+        ]
+      },
+      "When": {
+        "Preserves": "Sugar"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/Machines",
+      "TargetField": [
+        "(BC)12"
+      ],
+      "Entries": {
+        "AdditionalConsumedItems": [
+          {
+            "ItemId": "118",
+            "RequiredCount": 1,
+            "InvalidCountMessage": "[LocalizedText Strings\\StringsFromCSFiles:Object.cs.12772]"
+          }
+        ]
+      },
+      "When": {
+        "Preserves": "Glass"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/Machines",
+      "TargetField": [
+        "(BC)12"
+      ],
+      "Entries": {
+        "AdditionalConsumedItems": [
+          {
+            "ItemId": "338",
+            "RequiredCount": 1,
+            "InvalidCountMessage": "[LocalizedText Strings\\StringsFromCSFiles:Object.cs.12772]"
+          }
+        ]
+      },
+      "When": {
+        "Preserves": "Quartz"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Blacksmith",
+        "Items"
+      ],
+      "Entries": {
+        "Glass Shards": {
+          "Id": "118",
+          "ItemId": "118",
+          "Price": "25"
+        }
+      },
+      "When": {
+        "BuyGlass": true
+      }
+    }
+  ]
+}
